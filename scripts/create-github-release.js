@@ -10,7 +10,7 @@ var packageJson = require(packageJsonPath);
 
 var github = new GithubApi({ version: '3.0.0'});
 
-github.authenticate({ type: 'oauth', token: process.env.GH_TOKEN });
+github.authenticate({ type: 'token', token: process.env.GH_TOKEN });
 
 var changelogContent = execSync(changelogCommand).toString();
 
