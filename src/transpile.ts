@@ -270,7 +270,7 @@ let diagnosticsWorker: ChildProcess = null;
 function runDiagnosticsWorker(context: BuildContext) {
   if (!diagnosticsWorker) {
     const workerModule = path.join(__dirname, 'transpile-worker.js');
-    diagnosticsWorker = fork(workerModule, [], { env: { FORCE_COLOR: true } });
+    diagnosticsWorker = fork(workerModule, [], { env: { FORCE_COLOR: "true" } });
 
     Logger.debug(`diagnosticsWorker created, pid: ${diagnosticsWorker.pid}`);
 
