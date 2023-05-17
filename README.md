@@ -1,3 +1,5 @@
+This package is a clone of https://github.com/ionic-team/ionic-app-scripts v3.2.4 that has support for node.js v16 which is needed for Ionic AirFlow.
+
 [![npm version](https://img.shields.io/npm/v/@ionic/app-scripts.svg)](https://www.npmjs.com/package/@ionic/app-scripts)
 [![Circle CI](https://circleci.com/gh/ionic-team/ionic-app-scripts.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/ionic-team/ionic-app-scripts)
 
