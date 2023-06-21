@@ -270,7 +270,7 @@ We use Node 6, and NPM 5 for contributing.
 ### Publish a release
 
 Execute the following steps to publish a release:
-
+nvm use v18.15.0
 1. Ensure your branch has been merged into `master`
 2. Run `npm run build` to generate the `dist` directory
 3. Run `npm run test` to validate the `dist` works

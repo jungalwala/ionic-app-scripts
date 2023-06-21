@@ -1,6 +1,6 @@
 {
   "name": "@jungalwala/app-scripts",
-  "version": "3.2.7",
+  "version": "3.2.8",
   "description": "Scripts for Ionic Projects",
   "homepage": "https://ionicframework.com/",
   "author": "Ionic Team <hi@ionic.io> (https://ionic.io)",
@@ -33,6 +33,7 @@
   "dependencies": {
     "@angular-devkit/build-optimizer": "0.0.35",
     "@types/express-serve-static-core": "^4.16.11",
+    "@types/mime": "^2.0.1",
     "@types/minimatch": "^3.0.3",
     "autoprefixer": "^7.2.6",
     "chalk": "^2.4.0",
