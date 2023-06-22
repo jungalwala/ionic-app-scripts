@@ -170,7 +170,7 @@ export function transpileWorker(context: BuildContext, workerConfig: TranspileWo
 
     } else {
       // transpile success :)
-      resolve();
+      resolve(void 0);
     }
   });
 }
@@ -257,7 +257,7 @@ function transpileUpdateWorker(event: string, filePath: string, context: BuildCo
 export function transpileDiagnosticsOnly(context: BuildContext) {
   return new Promise(resolve => {
     workerEvent.once('DiagnosticsWorkerDone', () => {
-      resolve();
+      resolve(void 0);
     });
 
     runDiagnosticsWorker(context);

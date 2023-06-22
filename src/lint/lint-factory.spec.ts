@@ -17,7 +17,7 @@ describe('lint factory', () => {
   describe('createProgram()', () => {
     it('should create a TS Program', () => {
       const context: any = {rootDir: ''};
-      const program: any = createProgram(context, '');
+      const program: any = createProgram(context, './tsconfig.json');
       const fns = [
         'getSourceFiles',
         'getTypeChecker'
@@ -60,7 +60,7 @@ describe('lint factory', () => {
   describe('createLinter()', () => {
     it('should create a Linter', () => {
       const context: any = {rootDir: ''};
-      const program = createProgram(context, '');
+      const program = createProgram(context, './tsconfig.json');
       const linter = createLinter(context, program);
 
       expect(linter instanceof Linter).toBeTruthy();
@@ -70,7 +70,7 @@ describe('lint factory', () => {
   describe('getFileNames()', () => {
     it('should get the file names referenced in the tsconfig.json', () => {
       const context: any = {rootDir: ''};
-      const program = createProgram(context, '');
+      const program = createProgram(context, './tsconfig.json');
       const mockFiles = ['test.ts'];
       spyOn(Linter, 'getFileNames').and.returnValue(mockFiles);
       const files = getFileNames(context, program);
@@ -83,7 +83,7 @@ describe('lint factory', () => {
   describe('typeCheck()', () => {
     it('should not be called if {typeCheck} is false', done => {
       const context: any = {rootDir: ''};
-      const program = createProgram(context, '');
+      const program = createProgram(context, './tsconfig.json');
 
       spyOn(ts, ts.getPreEmitDiagnostics.name).and.returnValue([]);
 
@@ -97,7 +97,7 @@ describe('lint factory', () => {
 
     it('should type check if {typeCheck} is true', done => {
       const context: any = {rootDir: ''};
-      const program = createProgram(context, '');
+      const program = createProgram(context, './tsconfig.json');
 
       const diagnostics: any = [{
         file: {},
@@ -122,7 +122,7 @@ describe('lint factory', () => {
   describe('lint()', () => {
     it('should lint a file', () => {
       const context: any = {rootDir: ''};
-      const program = createProgram(context, '');
+      const program = createProgram(context, './tsconfig.json');
       const linter = createLinter(context, program);
       spyOn(linter, 'lint').and.returnValue(undefined);
       const config = {};
@@ -137,7 +137,7 @@ describe('lint factory', () => {
   describe('getLintResult()', () => {
     it('should get the lint results after linting a file', () => {
       const context: any = {rootDir: ''};
-      const program = createProgram(context, '');
+      const program = createProgram(context, './tsconfig.json');
       const linter = createLinter(context, program);
       spyOn(linter, 'lint').and.returnValue(undefined);
       const mockResult: any = {};

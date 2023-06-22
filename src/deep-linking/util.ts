@@ -445,15 +445,8 @@ export function purgeDeepLinkDecoratorTSTransformImpl(transformContext: Transfor
         }
       });
       const emptyNamedImports = createNamedImports(importSpecifiers);
-      const newImportClause = updateImportClause(importDeclaration.importClause, importDeclaration.importClause.name, emptyNamedImports);
-
-      return updateImportDeclaration(
-        importDeclaration,
-        importDeclaration.decorators,
-        importDeclaration.modifiers,
-        newImportClause,
-        importDeclaration.moduleSpecifier
-      );
+      const newImportClause = updateImportClause(importDeclaration.importClause, importDeclaration.importClause.name, emptyNamedImports, false);
+      return updateImportDeclaration(importDeclaration, importDeclaration.decorators, importDeclaration.modifiers, newImportClause, importDeclaration.moduleSpecifier, undefined);
     }
 
     return importDeclaration;
