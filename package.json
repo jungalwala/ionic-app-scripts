@@ -45,6 +45,7 @@
     "fs-extra": "^4.0.2",
     "glob": "^7.1.2",
     "json-loader": "^0.5.7",
+    "lru-cache": "^9.1.2",
     "node-sass": "^8.0.0",
     "os-name": "^2.0.1",
     "postcss": "^6.0.21",
