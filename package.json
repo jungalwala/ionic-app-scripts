@@ -29,7 +29,7 @@
     "test": "jest",
     "watch": "npm run clean && tsc --watch & npm run sass-watch",
     "postinstall": "mkdir -p ./node_modules/@ionic; ln -s ./node_modules/@jungalwala/app-scripts ./node_modules/@ionic/app-scripts",
-    "publish": "git add . ; git commit -am 'Preparing for release'; git push; npm run build; npm run test; CV=$(npm pkg get version | tr -d '\"'); npm version patch --no-git-tag-version; npm run changelog; git add . ; git commit -am 'Preparing for release 2'; git push; npm version $CV --no-git-tag-version; npm version patch; npm run github-release; npm publish; git push origin master"
+    "newversion": "git add . && git commit -am 'Preparing for release' && git push && npm run build && npm run test && CV=$(npm pkg get version | tr -d '\"') && npm version patch --no-git-tag-version && npm run changelog && git add . && git commit -am 'Preparing for release 2' && git push && npm version $CV --no-git-tag-version && npm version patch && npm run github-release && npm publish &&  git push origin master"
   },
   "main": "dist/index.js",
   "dependencies": {
