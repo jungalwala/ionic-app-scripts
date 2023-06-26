@@ -1,3 +1,8 @@
+<a name="3.2.15"></a>
+## [3.2.15](https://github.com/jungalwala/ionic-app-scripts/compare/v3.1.13...v3.2.15) (2023-06-26)
+
+
+
 <a name="3.2.14"></a>
 ## [3.2.14](https://github.com/jungalwala/ionic-app-scripts/compare/v3.1.13...v3.2.14) (2023-06-26)
 
