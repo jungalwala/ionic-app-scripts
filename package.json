@@ -27,7 +27,8 @@
     "sass": "node-sass ./src/dev-client/sass/ion-dev.scss --output ./bin/ --output-style compressed",
     "sass-watch": "npm run sass && node-sass ./src/dev-client/sass/ion-dev.scss --watch --output ./bin/ --output-style compressed",
     "test": "jest",
-    "watch": "npm run clean && tsc --watch & npm run sass-watch"
+    "watch": "npm run clean && tsc --watch & npm run sass-watch",
+    "postinstall": "mkdir -p ./node_modules/ionic; ln -s ./node_modules/@jungalwala/app-scripts ./node_modules/ionic/app-scripts"
   },
   "main": "dist/index.js",
   "dependencies": {
