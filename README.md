@@ -292,4 +292,4 @@ nvm use v18.15.0
 # Bump version, don't save
 # npm version patch --no-git-tag-version
 
-git add . ; git commit -am "Preparing for release"; git push; npm run build; npm run test; CV=$(npm pkg get version); npm version patch --no-git-tag-version; npm run changelog; git add . ; git commit -am "Preparing for release 2"; git push; npm version ${CV} --no-git-tag-version; npm version patch; npm run github-release; npm publish; git push origin master
+git add . ; git commit -am "Preparing for release"; git push; npm run build; npm run test; CV=$(npm pkg get version | tr -d '"'); npm version patch --no-git-tag-version; npm run changelog; git add . ; git commit -am "Preparing for release 2"; git push; npm version $CV --no-git-tag-version; npm version patch; npm run github-release; npm publish; git push origin master
