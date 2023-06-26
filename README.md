@@ -282,3 +282,14 @@ nvm use v18.15.0
 9. Run `npm run github-release` to create the github release entry
 10. Run `npm publish` to publish the package to npm
 11. `git push origin master` - push changes to master
+
+# to specific version
+# npm version ${newVersion} --no-git-tag-version
+
+# get current version of package
+# npm pkg get version
+
+# Bump version, don't save
+# npm version patch --no-git-tag-version
+
+git add . ; git commit -am "Preparing for release"; git push; npm run build; npm run test; CV=$(npm pkg get version); npm version patch --no-git-tag-version; npm run changelog; git add . ; git commit -am "Preparing for release 2"; git push; npm version ${CV} --no-git-tag-version; npm version patch; npm run github-release; npm publish; git push origin master
